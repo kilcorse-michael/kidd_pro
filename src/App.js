@@ -1,25 +1,37 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from "react-router-dom"
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import About from './components/About';
+import Services from './components/Services';
 
-function App() {
-  return (
+class App extends Component {
+logToConsole(){
+    console.log("||   ||      |||||||    |||||||         |||||||   |||||||     |||||||||\n||  ||       ||    ||   ||    ||        ||    ||  ||    ||   ||       ||\n|| ||    ||  ||     ||  ||     ||       ||    ||  ||    ||  ||         ||\n||||         ||     ||  ||     ||       ||    ||  ||    ||  ||         ||\n||||     ||  ||     ||  ||     ||       |||||||   |||||||   ||         ||\n|| ||    ||  ||     ||  ||     ||       ||        ||    ||  ||         ||\n||  ||   ||  ||    ||   ||    ||  ||||  ||        ||    ||   ||       ||\n||   ||  ||  |||||||    |||||||   ||||  ||        ||    ||    |||||||||\n=========================================================================\n=========================================================================\n^^                                                                     ^^\n^^                            Created by:                              ^^\n^^                          Michael Kilcorse                           ^^\n^^        -----------------------------------------------------        ^^\n^^                      Interested in hiring me?                       ^^\n^^                           Contact me at:                            ^^\n^^                          michael@kidd.pro                           ^^\n^^        -----------------------------------------------------        ^^\n^^                                                                     ^^\n^^                                                                     ^^\n=========================================================================\n=========================================================================\n")
+  };
+
+  componentDidMount(){
+    this.logToConsole();
+  }
+
+  render(){
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="services" element={<Services/>} />
+        <Route path="about" element={<About/>} />
+        <Route path="contact" element={<Contact/>} />
+      </Routes>
+    <Footer />
     </div>
   );
+ }
 }
 
 export default App;
