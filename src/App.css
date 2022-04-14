@@ -34,10 +34,25 @@
 
 .drop-down {
   position: absolute;
+  background-color: rgba(105,105,105, 0.8);
   top: 100%;
   left: 0;
   right: 0;
   z-index: 1;
+}
+
+.social-icons{
+  margin: 20px;
+}
+
+.overlay-img{
+  height: 85vh;
+  width: auto;
+}
+
+.abstract{
+  height: auto;
+  width: 100%;
 }
 
 @keyframes App-logo-spin {

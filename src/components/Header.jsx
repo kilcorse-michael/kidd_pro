@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <div>
-      <Navbar className="main-nav" color="light" light>
+      <Navbar className="main-nav" color="dark" dark>
         <NavbarBrand className="me-auto" href="/">
           KiDD.pro
         </NavbarBrand>

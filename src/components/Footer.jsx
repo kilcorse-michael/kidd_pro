@@ -8,6 +8,7 @@ import {
   Collapse,
   NavLink,
 } from "reactstrap";
+import { SocialIcon } from 'react-social-icons';
 import { NavLink as RRNavLink } from "react-router-dom";
 
 export default function Footer() {
@@ -18,35 +19,13 @@ export default function Footer() {
   }
 
   return (
-    <Navbar fixed="bottom" className="main-nav" color="dark" dark>
+    <Navbar fixed="bottom" className="main-nav" color="light" light>
       <NavbarBrand className="me-auto" href="/">
         KiDD.pro
       </NavbarBrand>
-      <NavbarToggler className="me-2" onClick={toggle} />
-      <Collapse className="drop-down" isOpen={isOpen} navbar>
-        <Nav navbar>
-          <NavItem>
-            <NavLink to="/" tag={RRNavLink}>
-              Home
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/about" tag={RRNavLink}>
-              About Us
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/contact" tag={RRNavLink}>
-              Contact Us
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/services" tag={RRNavLink}>
-              Services
-            </NavLink>
-          </NavItem>
-        </Nav>
-      </Collapse>
+      <SocialIcon className="social-icons" network="facebook" />
+      <SocialIcon className="social-icons" network="linkedin" />
+      <SocialIcon className="social-icons" network="twitter" />
     </Navbar>
   );
 }
